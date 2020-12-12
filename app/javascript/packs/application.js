@@ -11,7 +11,7 @@ require("channels")
 require("jquery")
 import '../stylesheets/application'
 import 'materialize-css/dist/js/materialize'
-require("post/dropdown")
+require("script/dropdown")
 
 
 window.jQuery = $;
