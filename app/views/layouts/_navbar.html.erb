@@ -6,16 +6,31 @@
     <li><a href="#!">three</a></li>
 </ul>
 
+<ul id="mobile_dropdown" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+</ul>
+
 <nav>
     <div class="container">
     <div class="nav-wrapper">
             <%= link_to "Zassa Neer", root_path, class: "brand-logo right" %>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="sass.html"><i class="large material-icons left">home</i>Income Information</a></li>
-                <li><a href="sass.html"><i class="large material-icons left">work</i>Expence Information</a></li>
-                <li><a href="sass.html"><i class="large material-icons left">account_balance</i>Bank Information</a></li>
+                <li><a href="#"><i class="large material-icons left">home</i>Income Information</a></li>
+                <li><a href="#"><i class="large material-icons left">work</i>Expence Information</a></li>
+                <li><a href="#"><i class="large material-icons left">account_balance</i>Bank Information</a></li>
                 <li><a class="dropdown-trigger" href="#!" data-target="menu_dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#"><i class="small material-icons left">home</i>Income Information</a></li>
+    <li><a href="#"><i class="small material-icons left">work</i>Expence Information</a></li>
+    <li><a href="#"><i class="small material-icons left">account_balance</i>Bank Information</a></li>
+    <li><a class="dropdown-trigger" href="#!" data-target="mobile_dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
