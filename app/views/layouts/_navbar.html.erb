@@ -19,7 +19,10 @@
             <%= link_to "Zassa Neer", root_path, class: "brand-logo right" %>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#"><i class="large material-icons left">home</i>Income Information</a></li>
+            <li> <%= link_to  new_income_path, :method => :get do %>
+                <i class="large material-icons left">home</i> Income Information
+            <% end %>
+            </li>
                 <li><a href="#"><i class="large material-icons left">work</i>Expence Information</a></li>
                 <li><a href="#"><i class="large material-icons left">account_balance</i>Bank Information</a></li>
                 <li><a class="dropdown-trigger" href="#!" data-target="menu_dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>

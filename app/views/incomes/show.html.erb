@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Record date:</strong>
+  <%= @income.record_date %>
+</p>
+
+<p>
+  <strong>Rent amount:</strong>
+  <%= @income.rent_amount %>
+</p>
+
+<p>
+  <strong>Water bill:</strong>
+  <%= @income.water_bill %>
+</p>
+
+<p>
+  <strong>Gas bill:</strong>
+  <%= @income.gas_bill %>
+</p>
+
+<p>
+  <strong>Electric bill:</strong>
+  <%= @income.electric_bill %>
+</p>
+
+<p>
+  <strong>Other amount:</strong>
+  <%= @income.other_amount %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @income.item.title %>
+</p>
+
+<%= link_to 'Edit', edit_income_path(@income) %> |
+<%= link_to 'Back', incomes_path %>

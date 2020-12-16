@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  record_date: 2020-12-15
+  rent_amount: 1
+  water_bill: 1
+  gas_bill: 1
+  electric_bill: 1
+  other_amount: 1
+  item: one
+
+two:
+  record_date: 2020-12-15
+  rent_amount: 1
+  water_bill: 1
+  gas_bill: 1
+  electric_bill: 1
+  other_amount: 1
+  item: two

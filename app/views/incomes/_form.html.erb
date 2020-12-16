@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@income) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+      <%= f.association :item, label: 'Select item name' %>
+      <%= f.date_field :record_date, class: 'datepicker' %>
+      <%= f.input :rent_amount, input_html: {min: 0, step: 'any' } %>
+      <%= f.input :water_bill, input_html: {min: 0, step: 'any' } %>
+      <%= f.input :gas_bill, input_html: {min: 0, step: 'any'} %>
+      <%= f.input :electric_bill, input_html: {min: 0, step: 'any' } %>
+      <%= f.input :other_amount, input_html: {min: 0, step: 'any' } %>
+    </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn waves-effect waves-light green-text text-darken-1" %>
+  </div>
+<% end %>
