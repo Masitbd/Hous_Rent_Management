@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank_name: MyString
+  deposite_date: 2020-12-16
+  deposite_amount: 1
+  account_name: MyString
+  account_number: MyString
+  person_name: MyString
+
+two:
+  bank_name: MyString
+  deposite_date: 2020-12-16
+  deposite_amount: 1
+  account_name: MyString
+  account_number: MyString
+  person_name: MyString

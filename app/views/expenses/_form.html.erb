@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@expense) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+  <%= f.association :expense_item %>
+    <%= f.date_field :expense_date, class: 'datepicker' %>
+    <%= f.input :expense_amount %>
+    <%= f.input :person_name %>
+    <%= f.input :description, class: 'materialize-textarea' %>
+   
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
