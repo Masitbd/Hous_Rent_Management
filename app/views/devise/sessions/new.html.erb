@@ -1,30 +1,33 @@
 <div class="row login-card">
-   <div class="col s12 m6 offset-m2">
-      <div class="card-action teal lighten-1 white-text">
+  <div class="col s12 m6 offset-m2">
+  <div class="card-panel">
+    <div class="card-action teal lighten-1 white-text">
       <h3>Login Form</h3>
-      </div>
-      <div class="card-content">
+    </div>
+    <div class="card-content">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :email,
+      <div class="form-inputs">
+            <%= f.input :email,
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
-          <%= f.input :password,
+            <%= f.input :password,
                       required: false,
                       input_html: { autocomplete: "current-password" } %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-      
-        <div class="form-actions">
+  
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+     
+      <div class="form-actions">
           <%= f.button :submit, "Login", class: 'btn-large waves-effect waves-dark', :style => "width:100%;" %>
-        </div>
+      </div>
       <% end %>
-      
+
       <%= render "devise/shared/links" %>
 
-      </div>
-   
-   </div>
-   
+    </div>
+
+  </div>
+
 </div>
+

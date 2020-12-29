@@ -1,15 +1,23 @@
 
 <ul id="menu_dropdown" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+    
+    <li><%= link_to user_session_path, :method => :get do %>
+        <i class="large material-icons blue-text left">account_circle</i> Sign in
+       
+     <% end %>
+  </li>  
+    
+    <li><%= link_to  destroy_user_session_path, :method => :delete do %>
+        <i class="large material-icons blue-text left">do_not_disturb_on</i> Sign out
+     <% end %>
+  </li>  
+   
 </ul>
 
 <ul id="mobile_dropdown" class="dropdown-content">
     <li><a href="#!">one</a></li>
     <li><a href="#!">two</a></li>
-    <li class="divider"></li>
+    <li class="divider"></li> 
     <li><a href="#!">three</a></li>
 </ul>
 
