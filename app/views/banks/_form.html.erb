@@ -1,12 +1,10 @@
-
+<%= render 'shared/errors', obj: @bank %>
 <%= simple_form_for(@bank) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.input :bank_name %>
-    <%= f.date_field :deposite_date, class: 'datepicker' %>
-    <%= f.input :deposite_amount %>
+    <%= f.date_field :deposite_date, class: 'datepicker', :value => Time.now.strftime('%Y-%m-%d') %> 
+    <%= f.input :deposite_amount, input_html: {min: 0, step: 'any' } %>
     <%= f.input :account_name %>
     <%= f.input :account_number %>
     <%= f.input :person_name %>

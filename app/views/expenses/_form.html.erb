@@ -1,12 +1,10 @@
-
+<%= render 'shared/errors', obj: @expense %>
 <%= simple_form_for(@expense) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-  <%= f.association :expense_item %>
-    <%= f.date_field :expense_date, class: 'datepicker' %>
-    <%= f.input :expense_amount %>
+  <%= f.association :expense_item, label: 'Select item name' %>
+    <%= f.date_field :expense_date, class: 'datepicker', :value => Time.now.strftime('%Y-%m-%d') %>
+    <%= f.input :expense_amount, input_html: {min: 0, step: 'any' } %>
     <%= f.input :person_name %>
     <%= f.input :description, class: 'materialize-textarea' %>
    

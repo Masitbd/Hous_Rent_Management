@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+<%= f.date_field :deposite_date, class: 'datepicker'  %>

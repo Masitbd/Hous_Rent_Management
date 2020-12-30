@@ -16,6 +16,7 @@
   </thead>
 
   <tbody>
+  <% runing_total = 0 %>
     <% @banks.each do |bank| %>
       <tr>
         <td><%= bank.bank_name %></td>
@@ -24,14 +25,15 @@
         <td><%= bank.account_name %></td>
         <td><%= bank.account_number %></td>
         <td><%= bank.person_name %></td>
-        <td><%= link_to 'Show', bank %></td>
-        <td><%= link_to 'Edit', edit_bank_path(bank) %></td>
-        <td><%= link_to 'Destroy', bank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><h6><%= link_to 'Show', bank, class: "btn waves-effect waves-light" %></h6></td>
+        <td><h6><%= link_to 'Edit', edit_bank_path(bank), class: "btn waves-effect  blue darken-3" %></h6></td>
+        <td><h6><%= link_to 'Destroy', bank, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn waves-effect red darken-2" %></h6></td>
+        <% runing_total = runing_total + bank.deposite_amount.to_i %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<h4 class="right-align">Total Amount:  <%= runing_total %></h4>
 <br>
 
 <%= link_to 'New Bank', new_bank_path %>

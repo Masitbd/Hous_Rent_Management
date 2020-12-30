@@ -1,5 +1,10 @@
 
 <%= link_to 'Back', incomes_path, class: "btn waves-effect waves-light" %>
+<div class="right">
+    <%= link_to new_item_path, class: "btn waves-effect waves-light", :method => :get do %>
+        Add Item
+    <% end %>
+</div>
 
 <h1>Income Information</h1>
 
