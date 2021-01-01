@@ -7,6 +7,8 @@ $(document).ready(function(){
 
     $('#datepicker').datepicker('setDate', new Date());
 
+
+
  });
 
   

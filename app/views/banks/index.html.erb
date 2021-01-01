@@ -35,5 +35,6 @@
 </table>
 <h4 class="right-align">Total Amount:  <%= runing_total %></h4>
 <br>
-
-<%= link_to 'New Bank', new_bank_path %>
+<%= link_to new_bank_path, class: "btn waves-effect waves-light", :method => :get do %>
+  New Bank
+  <% end %>

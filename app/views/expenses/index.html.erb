@@ -33,4 +33,6 @@
 <h4 class="right-align">Total Amount:  <%= runing_total %></h4>
 <br>
 
-<%= link_to 'New Expense', new_expense_path %>
+<%= link_to  new_expense_path, class: "btn waves-effect waves-light", :method => :get do %>
+  New Expense
+  <% end %>
