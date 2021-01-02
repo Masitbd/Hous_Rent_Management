@@ -30,5 +30,11 @@
   <%= @bank.person_name %>
 </p>
 
+<p>
+  <% if @bank.image.attached? %>
+    <strong>Bill picture</strong>
+    <%= image_tag(@bank.image, style: "width: 200px; display: block") %>
+  <% end %>  
+</p>
 <%= link_to 'Edit', edit_bank_path(@bank) %> |
 <%= link_to 'Back', banks_path %>

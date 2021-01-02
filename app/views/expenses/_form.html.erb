@@ -6,9 +6,25 @@
     <%= f.date_field :expense_date, class: 'datepicker', :value => Time.now.strftime('%Y-%m-%d') %>
     <%= f.input :expense_amount, input_html: {min: 0, step: 'any' } %>
     <%= f.input :person_name %>
-    <%= f.input :description, class: 'materialize-textarea' %>
+    
+
    
-  </div>
+    <div class="#">
+    <div class="file-field input-field gallery_picture">
+
+   <div class="btn">
+
+     <span>Upload file</span>
+     <%= f.input_field :image %>
+     </div>
+   <input class="file-path validate" type="text"/>
+   </div>
+
+</div> 
+
+
+    <%= f.input :description, class: 'materialize-textarea' %>
+   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
