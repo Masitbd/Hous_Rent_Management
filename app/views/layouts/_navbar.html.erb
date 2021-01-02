@@ -1,67 +1,75 @@
-
 <ul id="menu_dropdown" class="dropdown-content">
-    
+    <% if !user_signed_in? %>
     <li><%= link_to user_session_path, :method => :get do %>
         <i class="large material-icons blue-text left">account_circle</i> Sign in
-       
-     <% end %>
-  </li>  
-    
+
+        <% end %>
+    </li>
+    <% else %>
+
     <li><%= link_to  destroy_user_session_path, :method => :delete do %>
         <i class="large material-icons blue-text left">do_not_disturb_on</i> Sign out
-     <% end %>
-  </li>  
-   
+        <% end %>
+    </li>
+    <% end %>
 </ul>
 
 <ul id="mobile_dropdown" class="dropdown-content">
+    <% if !user_signed_in? %>
     <li><%= link_to user_session_path, :method => :get do %>
         <i class="small material-icons blue-text left">account_circle</i> Sign in
-    
-    <% end %>
-    </li>  
+
+        <% end %>
+    </li>
+    <% else %>
     <li><%= link_to  destroy_user_session_path, :method => :delete do %>
         <i class="small material-icons blue-text left">do_not_disturb_on</i> Sign out
-     <% end %>
-  </li>  
+        <% end %>
+    </li>
+    <% end %>
 </ul>
 
 <nav>
     <div class="container">
-    <div class="nav-wrapper">
-            <%= link_to "Zassa Neer", root_path, class: "brand-logo right" %>
+        <div class="nav-wrapper">
+            <%= link_to  root_path,  class: "brand-logo right", :method => :get do %>
+            Zassa Neer
+            <% end %>
+
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li> <%= link_to  new_income_path, :method => :get do %>
-                <i class="large material-icons left">home</i> Income Information
-            <% end %>
-            </li>
-            <li> <%= link_to  new_expense_path, :method => :get do %>
-                <i class="large material-icons left">exposure</i> Expense Information
-             <% end %>
-          </li>    
-            <li> <%= link_to  new_bank_path, :method => :get do %>
+                <li> <%= link_to  new_income_path, :method => :get do %>
+                    <i class="large material-icons left">home</i> Income Information
+                    <% end %>
+                </li>
+                <li> <%= link_to  new_expense_path, :method => :get do %>
+                    <i class="large material-icons left">exposure</i> Expense Information
+                    <% end %>
+                </li>
+                <li> <%= link_to  new_bank_path, :method => :get do %>
                     <i class="large material-icons left">account_balance</i> Bank Information
-                <% end %>
-            </li>    
-                <li><a class="dropdown-trigger" href="#!" data-target="menu_dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <% end %>
+                </li>
+                <li><a class="dropdown-trigger" href="#!" data-target="menu_dropdown">Account<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-        <li> <%= link_to  new_income_path, :method => :get do %>
-            <i class="small material-icons left">home</i> Income Information
+    <li> <%= link_to  new_income_path, :method => :get do %>
+        <i class="small material-icons left">home</i> Income Information
         <% end %>
-        <li> <%= link_to  new_expense_path, :method => :get do %>
-            <i class="small material-icons left">exposure</i> Expense Information
+    <li> <%= link_to  new_expense_path, :method => :get do %>
+        <i class="small material-icons left">exposure</i> Expense Information
         <% end %>
-        </li>   
-        <li> <%= link_to  new_bank_path, :method => :get do %>
-            <i class="small material-icons left">account_balance</i> Bank Information
+    </li>
+    <li> <%= link_to  new_bank_path, :method => :get do %>
+        <i class="small material-icons left">account_balance</i> Bank Information
         <% end %>
-        </li>   
-            
-    <li><a class="dropdown-trigger" href="#!" data-target="mobile_dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+    </li>
+
+    <li><a class="dropdown-trigger" href="#!" data-target="mobile_dropdown">Account<i
+                class="material-icons right">arrow_drop_down</i></a></li>
 </ul>

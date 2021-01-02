@@ -1,0 +1,8 @@
+
+<%= f.date_field :deposite_date, class: 'datepicker'  %>
+
+
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+       <%= render "devise/shared/links" %>

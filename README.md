@@ -1,27 +1,12 @@
-# README
+# House Rent Management Systems
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Building online rental management systems where house owner can manage the rent, bank deposit and upload the house related documents.
 
-Things you may want to cover:
+## Technology use:
 
-* Ruby version
+   * Ruby on rails
+   * JS
+   * Postgresql
+   * meterialize css
+   
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-<%= f.date_field :deposite_date, class: 'datepicker'  %>

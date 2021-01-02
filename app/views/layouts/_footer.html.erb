@@ -11,6 +11,14 @@
                   <li><a class="grey-text text-lighten-3" href="#!">Help</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">about</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Contact information</a></li>
+                  <% if user_signed_in? and current_user.email.eql? 'sarker24@gmail.com'  %>
+                      
+                      <li><%= link_to  new_user_path, :method => :get do %>
+                        <i class="small material-icons blue-text left">account_circle</i> Sign up
+                
+                        <% end %>
+                    </li>
+                  <% end %>
                 </ul>
               </div>
             </div>
