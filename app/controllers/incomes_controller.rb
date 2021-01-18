@@ -4,7 +4,8 @@ class IncomesController < ApplicationController
   # GET /incomes
   # GET /incomes.json
   def index
-    @incomes = Income.all
+   # @incomes = Income.where(record_date: (Date.today.beginning_of_month..Date.today.end_of_month))
+   @incomes = Income.all
   end
 
   # GET /incomes/1
